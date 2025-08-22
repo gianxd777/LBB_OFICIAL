@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Licorería La Botella Borracha</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <!-- Barra de navegación (solo HTML; el alineado requiere CSS) -->
+    <header>
+        <nav class="navbar">
+            <!-- Logo (arriba en móvil, izquierda en PC) -->
+            <div class="nav-logo">
+                <a href="/">Licorería La Botella Borracha</a>
+            </div>
+
+            <!-- Menú escritorio -->
+            <ul class="nav-menu">
+                <li><a href="/">Inicio</a></li>
+                <li><a href="/sobre-nosotros">Sobre nosotros</a></li>
+
+                <!-- Productos con submenú -->
+                <li class="has-submenu">
+                    <a href="/productos">Productos</a>
+                    <ul class="submenu">
+                        <li><a href="Whisky.html">Whisky</a></li>
+                        <li><a href="ron.html">Ron</a></li>
+                        <li><a href="/productos/vodka">Vodka</a></li>
+                        <li><a href="/productos/vinos">Vinos</a></li>
+                        <li><a href="/productos/cervezas">Cervezas</a></li>
+                        <li><a href="/productos/snacks">Snacks</a></li>
+                        <li><a href="/productos/snacks">Gasificadas con alcohol</a></li>
+
+                    </ul>
+                </li>
+
+                <li><a href="/ofertas">Ofertas</a></li>
+                <li><a href="/combos">Combos</a></li>
+            </ul>
+
+
+            <!-- Iconos PC -->
+            <div class="nav-icons desktop-icons">
+                <a href="/perfil" aria-label="Perfil"><i class="fa fa-user"></i></a>
+
+                <!-- Botón para abrir carrito -->
+                <a href="#" id="abrirCarrito" aria-label="Carrito"><i class="fa fa-shopping-cart"></i></a>
+
+                <!-- Carrito lateral -->
+
+            </div>
+
+        </nav>
+        <div id="carritoSidebar" class="carrito-sidebar">
+            <div class="carrito-header">
+                <h3>🛒 Mi carrito</h3>
+                <button id="cerrarCarrito">&times;</button>
+            </div>
+            <div class="carrito-items"></div>
+
+            <div class="carrito-footer">
+                <p>Total: S/ <span id="carritoTotal">0.00</span></p>
+                <button id="finalizarCompra">Finalizar</button>
+            </div>
+
+        </div>
+        <!-- Barra inferior móvil (hamburguesa + iconos) -->
+        <div class="mobile-bar">
+            <div class="nav-toggle">
+                <i class="fa fa-bars"></i>
+            </div>
+            <div class="nav-icons">
+                <a href="/perfil" aria-label="Perfil"><i class="fa fa-user"></i></a>
+                <a href="#" aria-label="Carrito"><i class="fa fa-shopping-cart"></i></a>
+            </div>
+        </div>
+
+        <!-- Menú móvil -->
+        <div class="mobile-menu">
+            <!-- Menú principal -->
+            <div class="menu-principal">
+                <a href="/">Inicio</a>
+                <a href="/sobre-nosotros">Sobre nosotros</a>
+                <a href="#" class="productos-btn">Productos</a>
+                <a href="/ofertas">Ofertas</a>
+                <a href="/combos">Combos</a>
+            </div>
+
+            <!-- Menú de categorías (oculto al inicio) -->
+            <div class="menu-categorias">
+                <a href="#" class="volver-btn"><i class="fa fa-arrow-left"></i> Volver</a>
+                <a href="Whisky.html">Whisky</a>
+                <a href="ron.html">Ron</a>
+                <a href="/productos/vodka">Vodka</a>
+                <a href="/productos/vinos">Vinos</a>
+                <a href="/productos/cervezas">Cervezas</a>
+                <a href="/productos/tequila">Tequila</a>
+                <a href="/productos/aperitivos">Aperitivos</a>
+                <a href="/productos/energizantes">Energizantes</a>
+                <a href="/productos/snacks">Snacks</a>
+                <a href="/productos/accesorios">Accesorios</a>
+            </div>
+        </div>
+
+    </header>
+
+
+
+
+    <main>
+        <!-- Banner 1 -->
+        <section aria-label="Banner principal">
+            <a href="/ofertas">
+                <img src="img/UYYYY.png" alt="Gran oferta en licores este fin de semana" width="1200" height="320">
+            </a>
+        </section>
+
+        <!-- Bloque de 4 productos (1) -->
+
+
+        <section aria-labelledby="titulo-productos-1">
+
+            <article data-producto-id="p1">
+                <figure>
+                    <img src="img/OLD TIME.webp" alt="Whisky Jack Daniels 750ml" width="300" height="300">
+                    <figcaption>
+                        <h3>Whisky OLD TIMES Red Botella 750ml
+                        </h3>
+                        <div>
+                            <span aria-label="Precio anterior"><del>S/ 28.90</del></span>
+                            <span aria-label="Precio nuevo"><strong>S/ 25.00</strong></span>
+
+                        </div>
+                        <p>
+                            <button type="button" aria-label="Agregar Whisky Jack Daniels al carrito">Agregar al
+                                carrito</button>
+                        </p>
+                    </figcaption>
+                </figure>
+            </article>
+
+            <article data-producto-id="p103">
+                <figure>
+                    <img src="img/FOU LOKO.webp" alt="Whisky Jack Daniels 750ml" width="300" height="300">
+                    <figcaption>
+                        <h3> FOUR LOKO White Lata 473ml  </h3>
+                        <div>
+                            <span aria-label="Precio anterior"><del>S/ 12.90</del></span>
+                            <span aria-label="Precio nuevo"><strong>S/ 10.90</strong></span>
+
+                        </div>
+                        <p>
+                            <button type="button" aria-label="Agregar Whisky Jack Daniels al carrito">Agregar al
+                                carrito</button>
+                        </p>
+                    </figcaption>
+                </figure>
+            </article>
+
+            <article data-producto-id="p105">
+                <figure>
+                    <img src="img/1_1000_250110000281.jpg" alt="Whisky Jack Daniels 750ml" width="300" height="300">
+                    <figcaption>
+                        <h3>A Jack Daniels 750ml</h3>
+                        <div>
+                            <span aria-label="Precio anterior"><del>S/ 109.90</del></span>
+                            <span aria-label="Precio nuevo"><strong>S/ 200.90</strong></span>
+
+                        </div>
+                        <p>
+                            <button type="button" aria-label="Agregar Whisky Jack Daniels al carrito">Agregar al
+                                carrito</button>
+                        </p>
+                    </figcaption>
+                </figure>
+            </article>
+
+            <article data-producto-id="p2">
+                <figure>
+                    <img src="img/1_1000_250110000281.jpg" alt="Ron Zacapa 23 750ml" width="300" height="300">
+                    <figcaption>
+                        <h3>Ron Zacapa 23 750ml</h3>
+                        <div>
+                            <span aria-label="Precio nuevo"><strong>S/ 169.90</strong></span>
+                            <span aria-label="Precio anterior"><del>S/ 199.90</del></span>
+                        </div>
+                        <p>
+                            <button type="button" aria-label="Agregar Ron Zacapa 23 al carrito">Agregar al
+                                carrito</button>
+                        </p>
+                    </figcaption>
+                </figure>
+            </article>
+
+            <article data-producto-id="p3">
+                <figure>
+                    <img src="img/productos/vodka-absolut.jpg" alt="Vodka Absolut 1L" width="300" height="300">
+                    <figcaption>
+                        <h3>Vodka Absolut 1L</h3>
+                        <div>
+                            <span aria-label="Precio nuevo"><strong>S/ 69.90</strong></span>
+                            <span aria-label="Precio anterior"><del>S/ 84.90</del></span>
+                        </div>
+                        <p>
+                            <button type="button" aria-label="Agregar Vodka Absolut al carrito">Agregar al
+                                carrito</button>
+                        </p>
+                    </figcaption>
+                </figure>
+            </article>
+
+            <article data-producto-id="p4">
+                <figure>
+                    <img src="img/productos/vino-malbec.jpg" alt="Vino Malbec Reserva 750ml" width="300" height="300">
+                    <figcaption>
+                        <h3>Vino Malbec Reserva 750ml</h3>
+                        <div>
+                            <span aria-label="Precio nuevo"><strong>S/ 49.90</strong></span>
+                            <span aria-label="Precio anterior"><del>S/ 59.90</del></span>
+                        </div>
+                        <p>
+                            <button type="button" aria-label="Agregar Vino Malbec al carrito">Agregar al
+                                carrito</button>
+                        </p>
+                    </figcaption>
+                </figure>
+            </article>
+        </section>
+
+        <!-- Banner 2 -->
+        <section aria-label="Banner intermedio">
+            <a href="/combos">
+                <img src="img/26.png" alt="Combos para compartir: ahorra más comprando en combo" width="1200"
+                    height="320">
+            </a>
+        </section>
+
+        <!-- Bloque de 4 productos (2) -->
+        <section aria-labelledby="titulo-productos-2">
+            <h2 id="titulo-productos-2">Nuevos ingresos</h2>
+
+            <article data-producto-id="p5">
+                <figure>
+                    <img src="img/productos/tequila-don-julio.jpg" alt="Tequila Don Julio Blanco 750ml" width="300"
+                        height="300">
+                    <figcaption>
+                        <h3>Tequila Don Julio Blanco 750ml</h3>
+                        <p>Tequila premium con notas cítricas y final suave, perfecto para margaritas.</p>
+                        <div class="precio-container">
+                            <span class="precio-antiguo">S/ 59.00</span>
+                            <span class="precio-nuevo">S/ 30.00</span>
+                        </div>
+
+
+                        <p>
+                            <button type="button" aria-label="Agregar Tequila Don Julio al carrito">Agregar al
+                                carrito</button>
+                        </p>
+                    </figcaption>
+                </figure>
+            </article>
+
+            <article data-producto-id="p6">
+                <figure>
+                    <img src="img/productos/cerveza-cusquena-pack.jpg" alt="Pack Cerveza Cusqueña 12x330ml" width="300"
+                        height="300">
+                    <figcaption>
+                        <h3>Pack Cerveza Cusqueña 12x330ml</h3>
+                        <p>Selección premium para reuniones, sabor balanceado y refrescante.</p>
+                        <div>
+                            <span aria-label="Precio nuevo"><strong>S/ 44.90</strong></span>
+                            <span aria-label="Precio anterior"><del>S/ 54.90</del></span>
+                        </div>
+                        <p>
+                            <button type="button" aria-label="Agregar Pack Cusqueña al carrito">Agregar al
+                                carrito</button>
+                        </p>
+                    </figcaption>
+                </figure>
+            </article>
+
+            <article data-producto-id="p7">
+                <figure>
+                    <img src="img/productos/aperol.jpg" alt="Aperol 750ml" width="300" height="300">
+                    <figcaption>
+                        <h3>Aperol 750ml</h3>
+                        <p>Clásico italiano para spritz, con notas de naranja amarga y hierbas.</p>
+                        <div>
+                            <span aria-label="Precio nuevo"><strong>S/ 62.90</strong></span>
+                            <span aria-label="Precio anterior"><del>S/ 72.90</del></span>
+                        </div>
+                        <p>
+                            <button type="button" aria-label="Agregar Aperol al carrito">Agregar al carrito</button>
+                        </p>
+                    </figcaption>
+                </figure>
+            </article>
+
+            <article data-producto-id="p8">
+                <figure>
+                    <img src="img/productos/energizante-redbull-pack.jpg" alt="Pack Red Bull 6x250ml" width="300"
+                        height="300">
+                    <figcaption>
+                        <h3>Pack Red Bull 6x250ml</h3>
+                        <p>Energía para la noche, pack ideal para mezclar y compartir.</p>
+                        <div>
+                            <span aria-label="Precio nuevo"><strong>S/ 32.90</strong></span>
+                            <span aria-label="Precio anterior"><del>S/ 39.90</del></span>
+                        </div>
+                        <p>
+                            <button type="button" aria-label="Agregar Pack Red Bull al carrito">Agregar al
+                                carrito</button>
+                        </p>
+                    </figcaption>
+                </figure>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+
+            <!-- Sobre nosotros -->
+            <section>
+                <h3>Sobre nosotros</h3>
+                <p>
+                    Somos <strong>Licorería La Botella Borracha</strong>, especialistas en licores nacionales
+                    e importados. Calidad y rapidez en cada entrega 🍷.
+                </p>
+            </section>
+
+            <!-- Locales -->
+            <section>
+                <h3>Locales</h3>
+                <ul>
+                    <li>📍 Huancayo - Av. Ferrocarril 1234</li>
+                    <li>📍 Lima - Av. Arequipa 567</li>
+                    <li>📍 Cusco - Jr. Principal 890</li>
+                </ul>
+            </section>
+
+            <!-- Horario -->
+            <section>
+                <h3>Horario de atención</h3>
+                <p>
+                    Lunes a Viernes: 9:00 am - 10:00 pm <br>
+                    Sábados: 10:00 am - 11:00 pm <br>
+                    Domingos: 11:00 am - 9:00 pm
+                </p>
+            </section>
+
+            <!-- Redes sociales -->
+            <section>
+                <h3>Síguenos</h3>
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </section>
+
+            <!-- Soporte y ayuda -->
+            <section>
+                <h3>Soporte y ayuda</h3>
+                <ul>
+                    <li>📩 Reclamos por pedidos</li>
+                    <li>📦 Reclamos por entrega</li>
+                    <li>💳 Reclamos por pagos</li>
+                </ul>
+            </section>
+        </div>
+
+        <!-- Copy -->
+        <div class="footer-copy">
+            &copy; 2025 Licorería La Botella Borracha. Todos los derechos reservados.
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

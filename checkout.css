@@ -1,0 +1,179 @@
+/* ===== Reset y general ===== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f4f6f8;
+  color: #333;
+  padding: 15px;
+}
+
+/* ===== Títulos ===== */
+h1, h2 {
+  text-align: center;
+  color: #1a1a1a;
+  margin-bottom: 15px;
+}
+
+h1 { font-size: 1.8rem; }
+h2 { font-size: 1.4rem; }
+
+/* ===== Opciones de compra ===== */
+.opciones-compra {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.opciones-compra label {
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.1rem;
+}
+
+/* ===== Contenedores de opciones ===== */
+.opcion {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 15px;
+  margin: 10px 0;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+}
+
+.opcion:hover {
+  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+}
+
+/* ===== Locales estilo tarjeta ===== */
+.locales label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background-color: #fafafa;
+}
+
+.locales label:hover {
+  background-color: #f0f0f0;
+}
+
+.img-local {
+  width: 70px;
+  height: auto;
+  border-radius: 8px;
+  margin-left: 10px;
+}
+
+/* ===== Formulario Delivery ===== */
+#form-delivery input {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#form-delivery input:focus {
+  border-color: #ff4d4f;
+  box-shadow: 0 0 8px rgba(255,77,79,0.2);
+  outline: none;
+}
+
+/* ===== Total ===== */
+#totalCompra {
+  display: block;
+  font-weight: 700;
+  font-size: 1.4rem;
+  text-align: center;
+  margin: 15px 0;
+  color: #ff4d4f;
+}
+
+/* ===== Botón Generar PDF ===== */
+button#generarPDF {
+  display: block;
+  width: 100%;
+  padding: 14px 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #fff;
+  background-color: #ff4d4f;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-bottom: 15px;
+}
+
+button#generarPDF:hover {
+  background-color: #e04345;
+  transform: translateY(-2px);
+}
+
+/* ===== Botón Volver al inicio ===== */
+button.volver-inicio {
+  display: block;
+  width: 100%;
+  padding: 14px 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #fff;
+  background-color: #007bff; /* Azul */
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button.volver-inicio:hover {
+  background-color: #0062cc;
+  transform: translateY(-2px);
+}
+
+/* ===== Responsive celulares ===== */
+@media (max-width: 480px) {
+  h1 { font-size: 1.6rem; }
+  h2 { font-size: 1.2rem; }
+
+  .opcion {
+    padding: 12px;
+  }
+
+  .locales label {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .img-local {
+    width: 100%;
+    margin: 8px 0 0 0;
+  }
+
+  #form-delivery input {
+    padding: 10px;
+    font-size: 0.95rem;
+  }
+
+  button#generarPDF,
+  button.volver-inicio {
+    font-size: 1rem;
+    padding: 12px 0;
+  }
+}

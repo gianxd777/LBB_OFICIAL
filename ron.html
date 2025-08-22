@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Licorería La Botella Borracha</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <!-- Barra de navegación (solo HTML; el alineado requiere CSS) -->
+    <header>
+        <nav class="navbar">
+            <!-- Logo (arriba en móvil, izquierda en PC) -->
+            <div class="nav-logo">
+                <a href="/">Licorería La Botella Borracha</a>
+            </div>
+
+            <!-- Menú escritorio -->
+            <ul class="nav-menu">
+                <li><a href="/">Inicio</a></li>
+                <li><a href="/sobre-nosotros">Sobre nosotros</a></li>
+
+                <!-- Productos con submenú -->
+                <li class="has-submenu">
+                    <a href="/productos">Productos</a>
+                    <ul class="submenu">
+                        <li><a href="Whisky.html">Whisky</a></li>
+                        <li><a href="ron.html">Ron</a></li>
+                        <li><a href="/productos/vodka">Vodka</a></li>
+                        <li><a href="/productos/vinos">Vinos</a></li>
+                        <li><a href="/productos/cervezas">Cervezas</a></li>
+                        <li><a href="/productos/snacks">Snacks</a></li>
+                        <li><a href="/productos/snacks">Gasificadas con alcohol</a></li>
+
+                    </ul>
+                </li>
+
+                <li><a href="/ofertas">Ofertas</a></li>
+                <li><a href="/combos">Combos</a></li>
+            </ul>
+
+
+            <!-- Iconos PC -->
+            <div class="nav-icons desktop-icons">
+                <a href="/perfil" aria-label="Perfil"><i class="fa fa-user"></i></a>
+
+                <!-- Botón para abrir carrito -->
+                <a href="#" id="abrirCarrito" aria-label="Carrito"><i class="fa fa-shopping-cart"></i></a>
+
+                <!-- Carrito lateral -->
+
+            </div>
+
+        </nav>
+        <div id="carritoSidebar" class="carrito-sidebar">
+            <div class="carrito-header">
+                <h3>🛒 Mi carrito</h3>
+                <button id="cerrarCarrito">&times;</button>
+            </div>
+            <div class="carrito-items"></div>
+
+            <div class="carrito-footer">
+                <p>Total: S/ <span id="carritoTotal">0.00</span></p>
+                <button id="finalizarCompra">Finalizar</button>
+            </div>
+
+        </div>
+        <!-- Barra inferior móvil (hamburguesa + iconos) -->
+        <div class="mobile-bar">
+            <div class="nav-toggle">
+                <i class="fa fa-bars"></i>
+            </div>
+            <div class="nav-icons">
+                <a href="/perfil" aria-label="Perfil"><i class="fa fa-user"></i></a>
+                <a href="#" aria-label="Carrito"><i class="fa fa-shopping-cart"></i></a>
+            </div>
+        </div>
+
+        <!-- Menú móvil -->
+        <div class="mobile-menu">
+            <!-- Menú principal -->
+            <div class="menu-principal">
+                <a href="/">Inicio</a>
+                <a href="/sobre-nosotros">Sobre nosotros</a>
+                <a href="#" class="productos-btn">Productos</a>
+                <a href="/ofertas">Ofertas</a>
+                <a href="/combos">Combos</a>
+            </div>
+
+            <!-- Menú de categorías (oculto al inicio) -->
+            <div class="menu-categorias">
+                <a href="#" class="volver-btn"><i class="fa fa-arrow-left"></i> Volver</a>
+                <a href="/productos/whisky">Whisky</a>
+                <a href="/productos/ron">Ron</a>
+                <a href="/productos/vodka">Vodka</a>
+                <a href="/productos/vinos">Vinos</a>
+                <a href="/productos/cervezas">Cervezas</a>
+                <a href="/productos/tequila">Tequila</a>
+                <a href="/productos/aperitivos">Aperitivos</a>
+                <a href="/productos/energizantes">Energizantes</a>
+                <a href="/productos/snacks">Snacks</a>
+                <a href="/productos/accesorios">Accesorios</a>
+            </div>
+        </div>
+
+
+    </header>
+
+
+
+
+    <main>
+        <!-- Banner 1 -->
+        <section aria-label="Banner principal">
+            <a href="/ofertas">
+                <img src="img/2.png" alt="Gran oferta en licores este fin de semana" width="1200" height="320">
+            </a>
+        </section>
+
+        <!-- Bloque de 4 productos (1) -->
+
+
+    </main>
+    <article data-producto-id="p001">
+  <img src="img/ejemplo.png" alt="Nombre del producto">
+  <h3>Nombre del producto</h3>
+  <p>Descripción breve del producto</p>
+  <p class="precio-nuevo">S/ 120.00</p>
+  <button aria-label="Agregar al carrito">Agregar</button>
+</article>
+
+
+<section aria-labelledby="titulo-productos">
+
+  <article data-producto-id="w001">
+    <img src="img/whisky1.jpg" alt="Whisky Escocés">
+    <figcaption>
+      <h3>Whisky Escocés</h3>
+      <p>Blended whisky de 12 años</p>
+      <div class="precio-container">
+        <del>S/ 200.00</del>
+        <strong>S/ 180.00</strong>
+      </div>
+      <button aria-label="Agregar al carrito">Agregar</button>
+    </figcaption>
+  </article>
+
+  <article data-producto-id="r001">
+    <img src="img/ron1.jpg" alt="Ron Añejo">
+    <figcaption>
+      <h3>Ron Añejo</h3>
+      <p>Ron de caña premium</p>
+      <div class="precio-container">
+        <del>S/ 150.00</del>
+        <strong>S/ 130.00</strong>
+      </div>
+      <button aria-label="Agregar al carrito">Agregar</button>
+    </figcaption>
+  </article>
+
+  <article data-producto-id="Ñ001">
+    <img src="img/ron1.jpg" alt="Ron Añejo">
+    <figcaption>
+      <h3>CAGAO P Añejo</h3>
+      <p>Ron de caña premium</p>
+      <div class="precio-container">
+        <del>S/ 150.00</del>
+        <strong>S/ 130.00</strong>
+      </div>
+      <button aria-label="Agregar al carrito">Agregar</button>
+    </figcaption>
+  </article>
+
+  <!-- Más productos -->
+</section>
+
+    <footer>
+        <div class="footer-container">
+
+            <!-- Sobre nosotros -->
+            <section>
+                <h3>Sobre nosotros</h3>
+                <p>
+                    Somos <strong>Licorería La Botella Borracha</strong>, especialistas en licores nacionales
+                    e importados. Calidad y rapidez en cada entrega 🍷.
+                </p>
+            </section>
+
+            <!-- Locales -->
+            <section>
+                <h3>Locales</h3>
+                <ul>
+                    <li>📍 Huancayo - Av. Ferrocarril 1234</li>
+                    <li>📍 Lima - Av. Arequipa 567</li>
+                    <li>📍 Cusco - Jr. Principal 890</li>
+                </ul>
+            </section>
+
+            <!-- Horario -->
+            <section>
+                <h3>Horario de atención</h3>
+                <p>
+                    Lunes a Viernes: 9:00 am - 10:00 pm <br>
+                    Sábados: 10:00 am - 11:00 pm <br>
+                    Domingos: 11:00 am - 9:00 pm
+                </p>
+            </section>
+
+            <!-- Redes sociales -->
+            <section>
+                <h3>Síguenos</h3>
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </section>
+
+            <!-- Soporte y ayuda -->
+            <section>
+                <h3>Soporte y ayuda</h3>
+                <ul>
+                    <li>📩 Reclamos por pedidos</li>
+                    <li>📦 Reclamos por entrega</li>
+                    <li>💳 Reclamos por pagos</li>
+                </ul>
+            </section>
+        </div>
+
+        <!-- Copy -->
+        <div class="footer-copy">
+            &copy; 2025 Licorería La Botella Borracha. Todos los derechos reservados.
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

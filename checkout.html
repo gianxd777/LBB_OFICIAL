@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Finalizar Compra</title>
+  <link rel="stylesheet" href="checkout.css">
+</head>
+<body>
+  <h1>Finalizar Compra</h1>
+
+  <div class="opciones-compra">
+    <label>
+      <input type="radio" name="tipo-compra" value="tienda"> Recojo en tienda
+    </label>
+    <label>
+      <input type="radio" name="tipo-compra" value="delivery"> Delivery
+    </label>
+  </div>
+
+  <!-- Recojo en tienda -->
+  <div id="tienda" class="opcion" style="display:none;">
+    <h2>Selecciona tu local</h2>
+    <div class="locales">
+      <label>
+        <input type="radio" name="local" value="Local 1" data-direccion="Av. Huancayo 123" data-imagen="local1.jpg">
+        Local 1 - Av. Huancayo 123 <img src="local1.jpg" alt="Local 1" class="img-local">
+      </label>
+      <label>
+        <input type="radio" name="local" value="Local 2" data-direccion="Calle Lima 456" data-imagen="local2.jpg">
+        Local 2 - Calle Lima 456 <img src="local2.jpg" alt="Local 2" class="img-local">
+      </label>
+      <label>
+        <input type="radio" name="local" value="Local 3" data-direccion="Jr. Arequipa 789" data-imagen="local3.jpg">
+        Local 3 - Jr. Arequipa 789 <img src="local3.jpg" alt="Local 3" class="img-local">
+      </label>
+    </div>
+  </div>
+
+  <!-- Delivery -->
+  <div id="delivery" class="opcion" style="display:none;">
+    <h2>Ingresa tu dirección</h2>
+    <form id="form-delivery">
+      <input type="text" name="nombre" placeholder="Nombre completo" required>
+      <input type="text" name="direccion" placeholder="Dirección de entrega" required>
+      <input type="tel" name="telefono" placeholder="Número celular" required>
+    </form>
+  </div>
+
+  <h2>EL Total es: S/ <span id="totalCompra">0.00</span></h2>
+  <h2>Enviar captura del PDF (o el PDF) + captura del Yape</h2>
+  <h2>Número de Yape y WhatsApp: 926 727 267</h2>
+  
+  <button id="generarPDF">Generar PDF</button>
+
+  <!-- Botón para volver al inicio -->
+<button class="volver-inicio" onclick="location.href='index.html'">Volver al inicio</button>
+
+  <script src="checkout.js"></script>
+</body>
+</html>
