@@ -760,3 +760,49 @@ figcaption button:hover {
         width: 100%;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.footer-social a {
+  text-decoration: none;  /* Quita el subrayado */
+  color: #fff;            /* Ajusta el color de los iconos */
+  margin: 0 10px;         /* Espaciado entre iconos */
+  font-size: 24px;        /* Tamaño de los iconos */
+}
+
+.footer-social a:hover {
+  color: #e50914; /* Cambia de color al pasar el mouse (ejemplo rojo) */
+}

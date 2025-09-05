@@ -22,7 +22,7 @@ tipoCompraRadios.forEach(radio => {
     } else {
       deliveryDiv.style.display = 'block';
       tiendaDiv.style.display = 'none';
-      totalCompra.textContent = (total + 5.90).toFixed(2); // con envío
+      totalCompra.textContent = (total + 10.00).toFixed(2); // con envío
     }
   });
 });
@@ -167,3 +167,16 @@ document.addEventListener("DOMContentLoaded", () => {
     doc.save("compra.pdf");
   }
 });
+
+
+
+
+
+
+
+
+
+
+
+
+

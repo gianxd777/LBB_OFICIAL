@@ -24,16 +24,13 @@
     <div class="locales">
       <label>
         <input type="radio" name="local" value="Local 1" data-direccion="Av. Huancayo 123" data-imagen="local1.jpg">
-        Local 1 - Av. Huancayo 123 <img src="local1.jpg" alt="Local 1" class="img-local">
+        📍 Huancayo - Jupiter y Cometa (ALfrente del parque de las aguas) <img src="" alt="Local 1" class="img-local">
       </label>
       <label>
         <input type="radio" name="local" value="Local 2" data-direccion="Calle Lima 456" data-imagen="local2.jpg">
-        Local 2 - Calle Lima 456 <img src="local2.jpg" alt="Local 2" class="img-local">
+        📍 Huancayo - cooperativa Santa Isabel - Av. orion Mz S lote 22 <img src="local2.jpg" alt="Local 2" class="img-local">
       </label>
-      <label>
-        <input type="radio" name="local" value="Local 3" data-direccion="Jr. Arequipa 789" data-imagen="local3.jpg">
-        Local 3 - Jr. Arequipa 789 <img src="local3.jpg" alt="Local 3" class="img-local">
-      </label>
+      
     </div>
   </div>
 
@@ -48,10 +45,48 @@
   </div>
 
   <h2>EL Total es: S/ <span id="totalCompra">0.00</span></h2>
+  
   <h2>Enviar captura del PDF (o el PDF) + captura del Yape</h2>
   <h2>Número de Yape y WhatsApp: 926 727 267</h2>
   
   <button id="generarPDF">Generar PDF</button>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<button id="btnWhatsapp">ENVIAR COMPROBANTE AL WHATSAPP</button>
+
+<script>
+  document.getElementById("btnWhatsapp").addEventListener("click", function() {
+    // Número al que quieres enviar (con código de país, Perú = 51)
+    let numero = "51912886670";  
+
+    // Mensaje que quieres que aparezca
+    let mensaje = "Hola, este es mi comprobante 📄✅";  
+
+    // Crear enlace de WhatsApp
+    let url = `https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`;
+
+    // Abrir WhatsApp en nueva pestaña
+    window.open(url, "_blank");
+  });
+</script>
+
+
+
+
+
+
 
   <!-- Botón para volver al inicio -->
 <button class="volver-inicio" onclick="location.href='index.html'">Volver al inicio</button>
