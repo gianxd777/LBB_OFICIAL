@@ -87,11 +87,21 @@ generarPDFBtn.addEventListener('click', () => {
 
 // checkout.js
 
+// checkout.js
+
+// checkout.js
+
+// checkout.js
+
 document.addEventListener("DOMContentLoaded", () => {
   const tipoCompraRadios = document.querySelectorAll('input[name="tipo-compra"]');
   const tiendaDiv = document.getElementById("tienda");
   const deliveryDiv = document.getElementById("delivery");
   const generarPDFBtn = document.getElementById("generarPDF");
+
+  // Cargar carrito del localStorage
+  let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+  let total = carrito.reduce((acc, item) => acc + item.precio * item.cantidad, 0);
 
   tipoCompraRadios.forEach(radio => {
     radio.addEventListener("change", () => {
@@ -106,7 +116,6 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   generarPDFBtn.addEventListener("click", () => {
-    // Importamos jsPDF desde CDN
     if (!window.jspdf) {
       const script = document.createElement("script");
       script.src = "https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js";
@@ -123,8 +132,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let y = 10;
     doc.setFontSize(16);
-    doc.text("Finalizar Compra", 10, y);
+    doc.text("Detalle de Compra", 10, y);
     y += 10;
+
+    // Listado de productos
+    doc.setFontSize(12);
+    carrito.forEach(item => {
+      let linea = `${item.nombre} - S/ ${item.precio.toFixed(2)} x ${item.cantidad} = S/ ${(item.precio * item.cantidad).toFixed(2)}`;
+      doc.text(linea, 10, y);
+      y += 8;
+    });
+
+    y += 5;
 
     // Tipo de compra
     const tipoSeleccionado = document.querySelector('input[name="tipo-compra"]:checked');
@@ -136,47 +155,38 @@ document.addEventListener("DOMContentLoaded", () => {
       if (tipoSeleccionado.value === "tienda") {
         const localSeleccionado = document.querySelector('input[name="local"]:checked');
         if (localSeleccionado) {
-          doc.text(`Local: ${localSeleccionado.value}`, 10, y);
-          y += 10;
-          doc.text(`Dirección: ${localSeleccionado.dataset.direccion}`, 10, y);
+          // Tomar solo el texto del label (dirección completa)
+          const direccionCompleta = localSeleccionado.parentElement.innerText
+            .replace(/^\s*📍\s*/, "") // eliminar el icono 📍 si existe
+            .trim();
+
+          doc.text(`Dirección del local: ${direccionCompleta}`, 10, y);
           y += 10;
         } else {
-          doc.text("No se seleccionó ningún local.", 10, y);
+          doc.text("⚠ No se seleccionó ningún local.", 10, y);
           y += 10;
         }
       } else if (tipoSeleccionado.value === "delivery") {
         const form = document.getElementById("form-delivery");
         doc.text(`Nombre: ${form.nombre.value}`, 10, y);
-        y += 10;
+        y += 8;
         doc.text(`Dirección: ${form.direccion.value}`, 10, y);
-        y += 10;
+        y += 8;
         doc.text(`Teléfono: ${form.telefono.value}`, 10, y);
         y += 10;
+
+        total += 5.90; // costo de envío
+        doc.text("Costo de envío: S/ 5.90", 10, y);
+        y += 10;
       }
-    } else {
-      doc.text("No se seleccionó tipo de compra.", 10, y);
-      y += 10;
     }
 
-    // Total
-    const total = document.getElementById("totalCompra").innerText;
+    // Total final
     doc.setFontSize(14);
-    doc.text(`Total: S/ ${total}`, 10, y + 10);
+    doc.text(`TOTAL FINAL: S/ ${total.toFixed(2)}`, 10, y + 5);
 
     // Guardar PDF
     doc.save("compra.pdf");
   }
 });
-
-
-
-
-
-
-
-
-
-
-
-
 
