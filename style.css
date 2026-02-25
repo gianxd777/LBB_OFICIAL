@@ -806,3 +806,14 @@ figcaption button:hover {
 .footer-social a:hover {
   color: #e50914; /* Cambia de color al pasar el mouse (ejemplo rojo) */
 }
+
+
+.reclamos a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.reclamos a:hover {
+    color: #ff2c2c;
+}
+
