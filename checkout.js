@@ -168,26 +168,33 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // 7. Lógica para el botón de WhatsApp
+// --- LÓGICA PARA EL BOTÓN DE WHATSAPP (CORREGIDO PARA MÓVILES) ---
 const btnWhatsapp = document.getElementById("btnWhatsapp");
 
-btnWhatsapp.addEventListener("click", () => {
-    const tipoSeleccionado = document.querySelector('input[name="tipo-compra"]:checked');
-    
-    if (!tipoSeleccionado) {
-        alert("⚠️ Selecciona un método de entrega primero.");
-        return;
-    }
+if (btnWhatsapp) {
+    btnWhatsapp.addEventListener("click", () => {
+        const tipoSeleccionado = document.querySelector('input[name="tipo-compra"]:checked');
+        
+        if (!tipoSeleccionado) {
+            alert("⚠️ Por favor, selecciona primero si es Recojo o Delivery.");
+            return;
+        }
 
-    // Tu número de WhatsApp (sin espacios ni símbolos)
-    const numeroTelefono = "51912886670"; // 51 es el código de Perú
-    
-    // Construcción del mensaje
-    let mensaje = `¡Hola! Acabo de generar mi pedido. %0A`; // %0A es un salto de línea
-    mensaje += `*Total a pagar:* S/ ${document.getElementById('totalCompra').textContent}%0A%0A`;
-    mensaje += `*Método:* ${tipoSeleccionado.value === 'tienda' ? 'Recojo en Local' : 'Delivery'}%0A`;
-    mensaje += `_Adjunto el PDF y el comprobante de pago._`;
+        const numeroTelefono = "51912886670"; // Prefijo 51 para Perú
+        const total = document.getElementById('totalCompra').textContent;
+        const metodo = tipoSeleccionado.value === 'tienda' ? 'Recojo en Local' : 'Delivery';
 
-    // Abrir WhatsApp en una nueva pestaña
-    const url = `https://wa.me/${numeroTelefono}?text=${mensaje}`;
-    window.open(url, '_blank');
-});
+        // Creamos el mensaje con saltos de línea (%0A)
+        let mensaje = `*PEDIDO NUEVO - LA BOTELLA BORRACHA*%0A`;
+        mensaje += `--------------------------%0A`;
+        mensaje += `*Total:* S/ ${total}%0A`;
+        mensaje += `*Método:* ${metodo}%0A%0A`;
+        mensaje += `_Hola, adjunto mi resumen en PDF y mi captura de pago._`;
+
+        // Usamos wa.me que es el estándar universal para móvil y PC
+        const url = `https://wa.me/${numeroTelefono}?text=${mensaje}`;
+        
+        // Abrir en una pestaña nueva
+        window.open(url, '_blank');
+    });
+}
