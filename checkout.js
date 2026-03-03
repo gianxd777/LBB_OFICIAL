@@ -166,3 +166,28 @@ document.addEventListener("DOMContentLoaded", () => {
         alert("✅ PDF generado con éxito.");
     }
 });
+
+// 7. Lógica para el botón de WhatsApp
+const btnWhatsapp = document.getElementById("btnWhatsapp");
+
+btnWhatsapp.addEventListener("click", () => {
+    const tipoSeleccionado = document.querySelector('input[name="tipo-compra"]:checked');
+    
+    if (!tipoSeleccionado) {
+        alert("⚠️ Selecciona un método de entrega primero.");
+        return;
+    }
+
+    // Tu número de WhatsApp (sin espacios ni símbolos)
+    const numeroTelefono = "51912886670"; // 51 es el código de Perú
+    
+    // Construcción del mensaje
+    let mensaje = `¡Hola! Acabo de generar mi pedido. %0A`; // %0A es un salto de línea
+    mensaje += `*Total a pagar:* S/ ${document.getElementById('totalCompra').textContent}%0A%0A`;
+    mensaje += `*Método:* ${tipoSeleccionado.value === 'tienda' ? 'Recojo en Local' : 'Delivery'}%0A`;
+    mensaje += `_Adjunto el PDF y el comprobante de pago._`;
+
+    // Abrir WhatsApp en una nueva pestaña
+    const url = `https://wa.me/${numeroTelefono}?text=${mensaje}`;
+    window.open(url, '_blank');
+});
