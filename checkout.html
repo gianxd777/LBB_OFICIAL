@@ -4,93 +4,99 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Finalizar Compra</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="checkout.css">
 </head>
 <body>
-  <h1>Finalizar Compra</h1>
 
-  <div class="opciones-compra">
-    <label>
-      <input type="radio" name="tipo-compra" value="tienda"> Recojo en tienda
+<div class="checkout-wrapper">
+  <div class="checkout-card">
+    <header class="checkout-header">
+      <h1>Finalizar <span class="text-red">Compra</span></h1>
+      <p>Selecciona tu método de entrega y completa tu pedido</p>
+    </header>
+
+    <div class="selector-metodo">
+      <input type="radio" name="tipo-compra" value="tienda" id="opt-tienda" hidden>
+      <label for="opt-tienda" class="metodo-card">
+        <span class="icon">🏢</span>
+        <span class="label">Recojo en Tienda</span>
+      </label>
+
+      <input type="radio" name="tipo-compra" value="delivery" id="opt-delivery" hidden>
+      <label for="opt-delivery" class="metodo-card">
+        <span class="icon">🛵</span>
+        <span class="label">Delivery</span>
+      </label>
+    </div>
+
+    <div id="tienda" class="panel-info" style="display:none;">
+  <h3><span class="dot"></span> Elige el punto de recojo</h3>
+  <div class="locales-grid">
+    
+    <input type="radio" name="local" value="Local 1" id="loc1" hidden>
+    <label for="loc1" class="local-card">
+      <div class="card-icon">📍</div>
+      <div class="card-content">
+        <strong>Huancayo - UPLA</strong>
+        <p>Jupiter y Cometa (Al frente del Parque de las Aguas)</p>
+        <span class="badge">Disponible</span>
+      </div>
+      <div class="select-indicator"></div>
     </label>
-    <label>
-      <input type="radio" name="tipo-compra" value="delivery"> Delivery
+
+    <input type="radio" name="local" value="Local 2" id="loc2" hidden>
+    <label for="loc2" class="local-card">
+      <div class="card-icon">📍</div>
+      <div class="card-content">
+        <strong>Sta. Isabel - Av. Orión</strong>
+        <p>Mz S lote 22 - Cooperativa Santa Isabel</p>
+        <span class="badge">Disponible</span>
+      </div>
+      <div class="select-indicator"></div>
     </label>
+
   </div>
+</div>
 
-  <!-- Recojo en tienda -->
-  <div id="tienda" class="opcion" style="display:none;">
-    <h2>Selecciona tu local</h2>
-    <div class="locales">
-      <label>
-        <input type="radio" name="local" value="Local 1" data-direccion="Av. Huancayo 123" data-imagen="local1.jpg">
-        📍 Huancayo - UPLA - Jupiter y Cometa (ALfrente del parque de las aguas) UPLA <img src="" alt="Local 1" class="img-local">
-      </label>
-      <label>
-        <input type="radio" name="local" value="Local 2" data-direccion="Calle Lima 456" data-imagen="local2.jpg">
-        📍 Huancayo - cooperativa Santa Isabel - Av. orion Mz S lote 22 <img src="local2.jpg" alt="Local 2" class="img-local">
-      </label>
-      
+    <div id="delivery" class="panel-info" style="display:none;">
+  <h3><span class="dot"></span> Datos de Entrega</h3>
+  <div class="form-grid">
+    <div class="input-field">
+      <input type="text" name="nombre" id="delivery-nombre" placeholder="Nombre completo" required>
+    </div>
+    <div class="input-field">
+      <input type="text" name="direccion" id="delivery-direccion" placeholder="Dirección exacta" required>
+    </div>
+    <div class="input-field">
+      <input type="tel" name="telefono" id="delivery-telefono" placeholder="Número celular" required>
     </div>
   </div>
+</div>
 
-  <!-- Delivery -->
-  <div id="delivery" class="opcion" style="display:none;">
-    <h2>Ingresa tu dirección</h2>
-    <form id="form-delivery">
-      <input type="text" name="nombre" placeholder="Nombre completo" required>
-      <input type="text" name="direccion" placeholder="Dirección de entrega" required>
-      <input type="tel" name="telefono" placeholder="Número celular" required>
-    </form>
+    <footer class="checkout-footer">
+      <div class="total-container">
+        <span class="total-label">TOTAL A PAGAR</span>
+        <span class="total-amount">S/ <span id="totalCompra">0.00</span></span>
+      </div>
+
+      <div class="payment-instructions">
+        <p>Realiza tu pago vía <strong>Yape</strong></p>
+        <div class="yape-number">926 727 267</div>
+      </div>
+
+      <div class="button-group">
+        <button id="generarPDF" class="btn btn-dark">📄 Descargar Resumen</button>
+        <button id="btnWhatsapp" class="btn btn-whatsapp">
+          <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" width="20">
+          ENVIAR A WHATSAPP
+        </button>
+        <button class="btn-back" onclick="location.href='index.html'">Regresar a la tienda</button>
+      </div>
+    </footer>
   </div>
+</div>
 
-  <h2>EL Total es: S/ <span id="totalCompra">0.00</span></h2>
-  
-  <h2>Enviar captura del PDF (o el PDF) + captura del Yape</h2>
-  <h2>Número de Yape y WhatsApp: 926 727 267</h2>
-  
-  <button id="generarPDF">Generar PDF</button>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<button id="btnWhatsapp">ENVIAR COMPROBANTE AL WHATSAPP</button>
-
-<script>
-  document.getElementById("btnWhatsapp").addEventListener("click", function() {
-    // Número al que quieres enviar (con código de país, Perú = 51)
-    let numero = "51912886670";  
-
-    // Mensaje que quieres que aparezca
-    let mensaje = "Hola, este es mi comprobante 📄✅";  
-
-    // Crear enlace de WhatsApp
-    let url = `https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`;
-
-    // Abrir WhatsApp en nueva pestaña
-    window.open(url, "_blank");
-  });
-</script>
-
-
-
-
-
-
-
-  <!-- Botón para volver al inicio -->
-<button class="volver-inicio" onclick="location.href='index.html'">Volver al inicio</button>
-
-  <script src="checkout.js"></script>
+<script src="checkout.js"></script>
 </body>
 </html>

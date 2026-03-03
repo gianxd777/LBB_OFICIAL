@@ -140,6 +140,7 @@ footer li {
 footer ul {
     list-style: none;
     padding: 0;
+    
 }
 
 .footer-social a {
@@ -162,6 +163,7 @@ footer ul {
     font-size: 0.8rem;
     color: #aaa;
 }
+
 
 /* ========== ANIMACIONES ========== */
 @keyframes fadeDown {
@@ -808,6 +810,8 @@ figcaption button:hover {
 }
 
 
+
+
 .reclamos a {
     color: #fff;
     text-decoration: none;
@@ -816,4 +820,3 @@ figcaption button:hover {
 .reclamos a:hover {
     color: #ff2c2c;
 }
-
