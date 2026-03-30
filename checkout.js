@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
     tipoCompraRadios.forEach(radio => {
         radio.addEventListener("change", (e) => {
             const esDelivery = e.target.value === "delivery";
-            const costoEnvio = 5.90;
+            const costoEnvio = 8.00;
 
             if (esDelivery) {
                 tiendaDiv.style.display = "none";
@@ -197,4 +197,24 @@ if (btnWhatsapp) {
         // Abrir en una pestaña nueva
         window.open(url, '_blank');
     });
+}
+
+
+
+
+
+
+
+function copiarNumero() {
+    const numero = document.getElementById("numeroYape").innerText;
+    const mensaje = document.getElementById("copiadoMsg");
+
+    navigator.clipboard.writeText(numero);
+
+    // Mostrar mensaje
+    mensaje.style.opacity = "1";
+
+    setTimeout(() => {
+        mensaje.style.opacity = "0";
+    }, 1500);
 }

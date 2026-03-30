@@ -24,24 +24,34 @@
             <!-- Menú escritorio -->
             <ul class="nav-menu">
                 <li><a href="index.html">Inicio</a></li>
-                <li><a href="construccion.html">Sobre nosotros</a></li>
+                <li><a href="https://gianxd777.github.io/Licoreria_La_Botella_Borracha1/blog.html">Sobre nosotros</a></li>
 
                 <!-- Productos con submenú -->
                 <li class="has-submenu">
-                    <a href="/productos">Productos</a>
+                    <a href="">Productos</a>
                     <ul class="submenu">
                         <li><a href="Whisky.html">Whisky</a></li>
                         <li><a href="ron.html">Ron</a></li>
                         <li><a href="vodka.html">Vodka</a></li>
                         <li><a href="vinos.html">Vinos</a></li>
                         <li><a href="cervezas.html">Cervezas</a></li>
-                        <li><a href="snacks.html">Snacks</a></li>
                         <li><a href="gasificadas.html">Gasificadas con alcohol</a></li>
 
                     </ul>
                 </li>
 
-                <li><a href="ofertas.html">Ofertas</a></li>
+                <li class="has-submenu">
+                    <a href="">SIN ALCOHOL</a>
+                    <ul class="submenu">
+                        <li><a href="mineral.html">Agua Mineral</a></li>
+                        <li><a href="energizantes.html">Energisantes</a></li>
+                        <li><a href="gaseosas.html">Gaseosas</a></li>
+                        <li><a href="cervezas.html">Vapes</a></li>
+                        <li><a href="snacks.html">Snacks</a></li>
+                        <li><a href="frugos.html">Frugos</a></li>
+
+                    </ul>
+                </li>
                 <li><a href="combos.html">Combos</a></li>
             </ul>
 
@@ -77,34 +87,42 @@
                 <i class="fa fa-bars"></i>
             </div>
             <div class="nav-icons">
-                <a href="/perfil" aria-label="Perfil"><i class="fa fa-user"></i></a>
+                <a href="construccion.html" aria-label="Perfil"><i class="fa fa-user"></i></a>
                 <a href="#" aria-label="Carrito"><i class="fa fa-shopping-cart"></i></a>
             </div>
         </div>
 
         <!-- Menú móvil -->
         <div class="mobile-menu">
-            <!-- Menú principal -->
-            <div class="menu-principal">
-                <a href="index.html">Inicio</a>
-                <a href="sobre_nosotros.html">Sobre nosotros</a>
-                <a href="#" class="productos-btn">Productos</a>
-                <a href="ofertas.html">Ofertas</a>
-                <a href="combos.html">Combos</a>
-            </div>
+    <div class="menu-principal">
+        <a href="index.html">Inicio</a>
+        <a href="sobre_nosotros.html">Sobre nosotros</a>
+        <a href="#" class="productos-btn" id="btn-alcohol">Productos</a>
+        <a href="#" class="productos-btn" id="btn-sin-alcohol">SIN ALCOHOL</a>
+        <a href="ofertas.html">Ofertas</a>
+        <a href="combos.html">Combos</a>
+    </div>
 
-            <!-- Menú de categorías (oculto al inicio) -->
-            <div class="menu-categorias">
-                <a href="#" class="volver-btn"><i class="fa fa-arrow-left"></i> Volver</a>
-                <a href="Whisky.html">Whisky</a>
-                <a href="ron.html">Ron</a>
-                <a href="vodka.html">Vodka</a>
-                <a href="vinos.html">Vinos</a>
-                <a href="cervezas.html">Cervezas</a>
-                <a href="snacks.html">Snacks</a>
-                <a href="gasificadas.html">Gasificadas con alcohol</a>
-            </div>
-        </div>
+    <div class="menu-categorias" id="menu-alcohol">
+        <a href="#" class="volver-btn"><i class="fa fa-arrow-left"></i> Volver</a>
+        <a href="Whisky.html">Whisky</a>
+        <a href="ron.html">Ron</a>
+        <a href="vodka.html">Vodka</a>
+        <a href="vinos.html">Vinos</a>
+        <a href="cervezas.html">Cervezas</a>
+        <a href="gasificadas.html">Gasificadas con alcohol</a>
+    </div>
+
+    <div class="menu-categorias" id="menu-sin-alcohol">
+        <a href="#" class="volver-btn"><i class="fa fa-arrow-left"></i> Volver</a>
+        <a href="mineral.html">Agua Mineral</a>
+        <a href="energizantes.html">Energizantes</a>
+        <a href="gaseosas.html">Gaseosas</a>
+        <a href="vapes.html">Vapes</a>
+        <a href="snacks.html">Snacks</a>
+        <a href="frugos.html">Frugos</a>
+    </div>
+</div>
 
     </header>
 
@@ -127,7 +145,7 @@
 
         <section aria-labelledby="titulo-productos">
 
-            <article data-producto-id="a25">
+            <article data-producto-id="a40">
                 <img src="img/Vodka RUSSKAYA Botella 750ml.webp" alt="Ron Añejo">
                 <figcaption>
                     <h3>Vodka RUSSKAYA Botella 750ml</h3>
@@ -139,7 +157,7 @@
                 </figcaption>
             </article>
 
-            <article data-producto-id="a26">
+            <article data-producto-id="a41">
                 <img src="img/Vodka Smirnoff Raspberry Botella 700 mL.webp" alt="Ron Añejo">
                 <figcaption>
                     <h3>Vodka Smirnoff Raspberry Botella 700 mL</h3>
@@ -150,7 +168,7 @@
                     <button aria-label="Agregar al carrito">Agregar al Carrito</button>
                 </figcaption>
             </article>
-            <article data-producto-id="a27">
+            <article data-producto-id="a42">
                 <img src="img/Vodka RUSSKAYA Pink Botella 750ml.webp" alt="Ron Añejo">
                 <figcaption>
                     <h3>Vodka Pink Russkaya Botella 750 mL</h3>
@@ -162,7 +180,7 @@
                 </figcaption>
             </article>
 
-            <article data-producto-id="a28">
+            <article data-producto-id="a43">
                 <img src="img/Vodka CARTAVIO Russkaya Green Apple Botella 750ml.webp" alt="Ron Añejo">
                 <figcaption>
                     <h3>Vodka  Russkaya Green Apple Botella 750ml
@@ -175,7 +193,7 @@
                 </figcaption>
             </article>
 
-            <article data-producto-id="a29">
+            <article data-producto-id="a44">
                 <img src="img/Vodka Russkaya Yellow Botella 750ml.webp" alt="Ron Añejo">
                 <figcaption>
                     <h3>Vodka Russkaya Yellow Botella 750ml</h3>
@@ -261,7 +279,6 @@
             <section>
                 <h3>Locales</h3>
                 <ul>
-                    <li>📍 Huancayo - Jupiter y Cometa (ALfrente del parque de las aguas)</li>
                     <li>📍 Huancayo - cooperativa Santa Isabel - Av. orion Mz S lote 22</li>
                 </ul>
             </section>

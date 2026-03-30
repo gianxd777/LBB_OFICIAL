@@ -11,27 +11,33 @@ if (toggle && mobileMenu) {
 }
 
 // ========================
-// Intercambio de menú principal y categorías
+// Intercambio de menú principal y categorías (CORREGIDO)
 // ========================
-const productosBtn = document.querySelector(".productos-btn");
-const volverBtn = document.querySelector(".volver-btn");
-
+const botonesCategorias = document.querySelectorAll(".productos-btn"); // Selecciona AMBOS botones
+const volverBtns = document.querySelectorAll(".volver-btn"); // Selecciona AMBOS botones de volver
+const menusCategorias = document.querySelectorAll(".menu-categorias"); // Selecciona AMBOS bloques de categorías
 const menuPrincipal = document.querySelector(".menu-principal");
-const menuCategorias = document.querySelector(".menu-categorias");
 
-if (productosBtn && volverBtn && menuPrincipal && menuCategorias) {
-  // Mostrar categorías y ocultar menú principal
-  productosBtn.addEventListener("click", (e) => {
-    e.preventDefault();
-    menuPrincipal.classList.add("hide");
-    menuCategorias.classList.add("active");
+if (botonesCategorias.length > 0 && menuPrincipal) {
+  
+  // Lógica para abrir
+  botonesCategorias.forEach((btn, index) => {
+    btn.addEventListener("click", (e) => {
+      e.preventDefault();
+      menuPrincipal.classList.add("hide");
+      // Abrimos el menú de categorías que corresponde a la posición del botón
+      menusCategorias[index].classList.add("active");
+    });
   });
 
-  // Volver al menú principal
-  volverBtn.addEventListener("click", (e) => {
-    e.preventDefault();
-    menuCategorias.classList.remove("active");
-    menuPrincipal.classList.remove("hide");
+  // Lógica para volver
+  volverBtns.forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      e.preventDefault();
+      // Quitamos el active de todos los menús de categorías
+      menusCategorias.forEach(menu => menu.classList.remove("active"));
+      menuPrincipal.classList.remove("hide");
+    });
   });
 }
 

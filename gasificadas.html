@@ -24,24 +24,34 @@
             <!-- Menú escritorio -->
             <ul class="nav-menu">
                 <li><a href="index.html">Inicio</a></li>
-                <li><a href="construccion.html">Sobre nosotros</a></li>
+                <li><a href="https://gianxd777.github.io/Licoreria_La_Botella_Borracha1/blog.html">Sobre nosotros</a></li>
 
                 <!-- Productos con submenú -->
                 <li class="has-submenu">
-                    <a href="/productos">Productos</a>
+                    <a href="">Productos</a>
                     <ul class="submenu">
                         <li><a href="Whisky.html">Whisky</a></li>
                         <li><a href="ron.html">Ron</a></li>
                         <li><a href="vodka.html">Vodka</a></li>
                         <li><a href="vinos.html">Vinos</a></li>
                         <li><a href="cervezas.html">Cervezas</a></li>
-                        <li><a href="snacks.html">Snacks</a></li>
                         <li><a href="gasificadas.html">Gasificadas con alcohol</a></li>
 
                     </ul>
                 </li>
 
-                <li><a href="ofertas.html">Ofertas</a></li>
+                <li class="has-submenu">
+                    <a href="">SIN ALCOHOL</a>
+                    <ul class="submenu">
+                        <li><a href="mineral.html">Agua Mineral</a></li>
+                        <li><a href="energizantes.html">Energisantes</a></li>
+                        <li><a href="gaseosas.html">Gaseosas</a></li>
+                        <li><a href="cervezas.html">Vapes</a></li>
+                        <li><a href="snacks.html">Snacks</a></li>
+                        <li><a href="frugos.html">Frugos</a></li>
+
+                    </ul>
+                </li>
                 <li><a href="combos.html">Combos</a></li>
             </ul>
 
@@ -54,7 +64,7 @@
                 <a href="#" id="abrirCarrito" aria-label="Carrito"><i class="fa fa-shopping-cart"></i></a>
 
                 <!-- Carrito lateral -->
-
+                
             </div>
 
         </nav>
@@ -84,27 +94,35 @@
 
         <!-- Menú móvil -->
         <div class="mobile-menu">
-            <!-- Menú principal -->
-            <div class="menu-principal">
-                <a href="index.html">Inicio</a>
-                <a href="sobre_nosotros.html">Sobre nosotros</a>
-                <a href="#" class="productos-btn">Productos</a>
-                <a href="ofertas.html">Ofertas</a>
-                <a href="combos.html">Combos</a>
-            </div>
+    <div class="menu-principal">
+        <a href="index.html">Inicio</a>
+        <a href="sobre_nosotros.html">Sobre nosotros</a>
+        <a href="#" class="productos-btn" id="btn-alcohol">Productos</a>
+        <a href="#" class="productos-btn" id="btn-sin-alcohol">SIN ALCOHOL</a>
+        <a href="ofertas.html">Ofertas</a>
+        <a href="combos.html">Combos</a>
+    </div>
 
-            <!-- Menú de categorías (oculto al inicio) -->
-            <div class="menu-categorias">
-                <a href="#" class="volver-btn"><i class="fa fa-arrow-left"></i> Volver</a>
-                <a href="Whisky.html">Whisky</a>
-                <a href="ron.html">Ron</a>
-                <a href="vodka.html">Vodka</a>
-                <a href="vinos.html">Vinos</a>
-                <a href="cervezas.html">Cervezas</a>
-                <a href="snacks.html">Snacks</a>
-                <a href="gasificadas.html">Gasificadas con alcohol</a>
-            </div>
-        </div>
+    <div class="menu-categorias" id="menu-alcohol">
+        <a href="#" class="volver-btn"><i class="fa fa-arrow-left"></i> Volver</a>
+        <a href="Whisky.html">Whisky</a>
+        <a href="ron.html">Ron</a>
+        <a href="vodka.html">Vodka</a>
+        <a href="vinos.html">Vinos</a>
+        <a href="cervezas.html">Cervezas</a>
+        <a href="gasificadas.html">Gasificadas con alcohol</a>
+    </div>
+
+    <div class="menu-categorias" id="menu-sin-alcohol">
+        <a href="#" class="volver-btn"><i class="fa fa-arrow-left"></i> Volver</a>
+        <a href="mineral.html">Agua Mineral</a>
+        <a href="energizantes.html">Energizantes</a>
+        <a href="gaseosas.html">Gaseosas</a>
+        <a href="vapes.html">Vapes</a>
+        <a href="snacks.html">Snacks</a>
+        <a href="frugos.html">Frugos</a>
+    </div>
+</div>
 
     </header>
 
@@ -121,143 +139,95 @@
 
         <section aria-labelledby="titulo-productos">
 
-            <article data-producto-id="a9">
+            <article data-producto-id="a13">
                 <img src="img/MIKES AMARRILLO.webp" alt="Ron Añejo">
                 <figcaption>
                     <h3>Vodka MIKES Hard Lemonade Lata 355ml</h3>
                     <div class="precio-container">
                         <del>S/ 7.00</del>
-                        <strong>S/ 5.50</strong>
+                        <strong>S/ 6.00</strong>
                     </div>
                     <button aria-label="Agregar al carrito">Agregar al Carrito</button>
                 </figcaption>
             </article>
-            <article data-producto-id="a10">
+            <article data-producto-id="a14">
                 <img src="img/mikes azul.webp" alt="Ron Añejo">
                 <figcaption>
                     <h3>MIKE'S Hard Blueberry Lemonade Lata 355ml</h3>
                     <div class="precio-container">
                         <del>S/ 7.00</del>
-                        <strong>S/ 5.50</strong>
+                        <strong>S/ 6.00</strong>
                     </div>
                     <button aria-label="Agregar al carrito">Agregar al Carrito</button>
                 </figcaption>
             </article>
-            <article data-producto-id="a11">
+            <article data-producto-id="a15">
                 <img src="img/mikes rojo.webp" alt="Ron Añejo">
                 <figcaption>
                     <h3>MIKE'S Hard Strawberry Lemonade Lata 355ml</h3>
                     <div class="precio-container">
                         <del>S/ 7.00</del>
-                        <strong>S/ 5.50</strong>
-                    </div>
-                    <button aria-label="Agregar al carrito">Agregar al Carrito</button>
-                </figcaption>
-            </article>
-
-            <article data-producto-id="a12">
-                <img src="img/mikes medioama.webp" alt="Ron Añejo">
-                <figcaption>
-                    <h3>MIKE'S Hard Passion Fruit Lemonade Lata 355ml</h3>
-                    <div class="precio-container">
-                        <del>S/ 7.00</del>
-                        <strong>S/ 5.50</strong>
-                    </div>
-                    <button aria-label="Agregar al carrito">Agregar al Carrito</button>
-                </figcaption>
-            </article>
-
-            <article data-producto-id="a13">
-                <img src="img/spark azul.webp" alt="Ron Añejo">
-                <figcaption>
-                    <h3>SPARK Blue Berry Lata 473ml</h3>
-                    <div class="precio-container">
-                        <del>S/ 9.00</del>
-                        <strong>S/ 7.00</strong>
-                    </div>
-                    <button aria-label="Agregar al carrito">Agregar al Carrito</button>
-                </figcaption>
-            </article>
-
-            <article data-producto-id="a14">
-                <img src="img/spark uva.webp" alt="Ron Añejo">
-                <figcaption>
-                    <h3>SPARK Uva Lata 473ml</h3>
-                    <div class="precio-container">
-                        <del>S/ 9.00</del>
-                        <strong>S/ 7.00</strong>
-                    </div>
-                    <button aria-label="Agregar al carrito">Agregar al Carrito</button>
-                </figcaption>
-            </article>
-
-            <article data-producto-id="a15">
-                <img src="img/spark verde.webp" alt="Ron Añejo">
-                <figcaption>
-                    <h3>SPARK Manzana Lata 473ml</h3>
-                    <div class="precio-container">
-                        <del>S/ 9.00</del>
-                        <strong>S/ 7.00</strong>
+                        <strong>S/ 6.00</strong>
                     </div>
                     <button aria-label="Agregar al carrito">Agregar al Carrito</button>
                 </figcaption>
             </article>
 
             <article data-producto-id="a16">
-                <img src="img/spark mandarina.jpeg" alt="Ron Añejo">
+                <img src="img/mikes medioama.webp" alt="Ron Añejo">
                 <figcaption>
-                    <h3>Spark Mandarina Lata 473ml</h3>
+                    <h3>MIKE'S Hard Passion Fruit Lemonade Lata 355ml</h3>
                     <div class="precio-container">
-                        <del>S/ 9.00</del>
-                        <strong>S/ 7.00</strong>
+                        <del>S/ 7.00</del>
+                        <strong>S/ 6.00</strong>
                     </div>
                     <button aria-label="Agregar al carrito">Agregar al Carrito</button>
                 </figcaption>
             </article>
 
-
             <article data-producto-id="a17">
-                <img src="img/wild anaranjado.webp" alt="Ron Añejo">
+                <img src="img/spark azul.webp" alt="Ron Añejo">
                 <figcaption>
-                    <h3>RUSSKAYA WILD Passion Fruit Lata 355ml</h3>
+                    <h3>SPARK Blue Berry Lata 473ml</h3>
                     <div class="precio-container">
-                        <del>S/ 6.00</del>
-                        <strong>S/ 5.00</strong>
+                        <del>S/ 9.00</del>
+                        <strong>S/ 8.00</strong>
                     </div>
                     <button aria-label="Agregar al carrito">Agregar al Carrito</button>
                 </figcaption>
             </article>
 
             <article data-producto-id="a18">
-                <img src="img/wild rosa.webp" alt="Ron Añejo">
+                <img src="img/spark uva.webp" alt="Ron Añejo">
                 <figcaption>
-                    <h3>RUSSKAYA WILD Sex on the Beach Lata 355ml</h3>
+                    <h3>SPARK Uva Lata 473ml</h3>
                     <div class="precio-container">
-                        <del>S/ 6.00</del>
-                        <strong>S/ 5.00</strong>
+                        <del>S/ 9.00</del>
+                        <strong>S/ 8.00</strong>
                     </div>
                     <button aria-label="Agregar al carrito">Agregar al Carrito</button>
                 </figcaption>
             </article>
+
             <article data-producto-id="a19">
-                <img src="img/WIL MORAO.webp" alt="Ron Añejo">
+                <img src="img/spark verde.webp" alt="Ron Añejo">
                 <figcaption>
-                    <h3>CARTAVIO HIT Mojito Lata 355ml</h3>
+                    <h3>SPARK Manzana Lata 473ml</h3>
                     <div class="precio-container">
-                        <del>S/ 6.00</del>
-                        <strong>S/ 5.00</strong>
+                        <del>S/ 9.00</del>
+                        <strong>S/ 8.00</strong>
                     </div>
                     <button aria-label="Agregar al carrito">Agregar al Carrito</button>
                 </figcaption>
             </article>
 
             <article data-producto-id="a20">
-                <img src="img/hit piña.webp " alt="Ron Añejo">
+                <img src="img/spark mandarina.jpeg" alt="Ron Añejo">
                 <figcaption>
-                    <h3>CARTAVIO HIT Piña Colada Lata 335ml</h3>
+                    <h3>Spark Mandarina Lata 473ml</h3>
                     <div class="precio-container">
-                        <del>S/ 6.00</del>
-                        <strong>S/ 5.00</strong>
+                        <del>S/ 9.00</del>
+                        <strong>S/ 8.00</strong>
                     </div>
                     <button aria-label="Agregar al carrito">Agregar al Carrito</button>
                 </figcaption>
@@ -265,6 +235,54 @@
 
 
             <article data-producto-id="a21">
+                <img src="img/wild anaranjado.webp" alt="Ron Añejo">
+                <figcaption>
+                    <h3>RUSSKAYA WILD Passion Fruit Lata 355ml</h3>
+                    <div class="precio-container">
+                        <del>S/ 6.00</del>
+                        <strong>S/ 6.00</strong>
+                    </div>
+                    <button aria-label="Agregar al carrito">Agregar al Carrito</button>
+                </figcaption>
+            </article>
+
+            <article data-producto-id="a22">
+                <img src="img/wild rosa.webp" alt="Ron Añejo">
+                <figcaption>
+                    <h3>RUSSKAYA WILD Sex on the Beach Lata 355ml</h3>
+                    <div class="precio-container">
+                        <del>S/ 6.00</del>
+                        <strong>S/ 6.00</strong>
+                    </div>
+                    <button aria-label="Agregar al carrito">Agregar al Carrito</button>
+                </figcaption>
+            </article>
+            <article data-producto-id="a23">
+                <img src="img/WIL MORAO.webp" alt="Ron Añejo">
+                <figcaption>
+                    <h3>CARTAVIO HIT Mojito Lata 355ml</h3>
+                    <div class="precio-container">
+                        <del>S/ 6.00</del>
+                        <strong>S/ 6.00</strong>
+                    </div>
+                    <button aria-label="Agregar al carrito">Agregar al Carrito</button>
+                </figcaption>
+            </article>
+
+            <article data-producto-id="a24">
+                <img src="img/hit piña.webp " alt="Ron Añejo">
+                <figcaption>
+                    <h3>CARTAVIO HIT Piña Colada Lata 335ml</h3>
+                    <div class="precio-container">
+                        <del>S/ 6.00</del>
+                        <strong>S/ 6.00</strong>
+                    </div>
+                    <button aria-label="Agregar al carrito">Agregar al Carrito</button>
+                </figcaption>
+            </article>
+
+
+            <article data-producto-id="a25">
                 <img src="img/maniako.webp" alt="Ron Añejo">
                 <figcaption>
                     <h3>Maniak Tropical Sunset Lata 500 ml</h3>
@@ -276,7 +294,7 @@
                 </figcaption>
             </article>
 
-            <article data-producto-id="a22">
+            <article data-producto-id="a26">
                 <img src="img/MANIAKO AZU.webp" alt="Ron Añejo">
                 <figcaption>
                     <h3>Maniak Crazy Coco Lata 500 ml</h3>
@@ -371,7 +389,6 @@
             <section>
                 <h3>Locales</h3>
                 <ul>
-                    <li>📍 Huancayo - Jupiter y Cometa (ALfrente del parque de las aguas)</li>
                     <li>📍 Huancayo - cooperativa Santa Isabel - Av. orion Mz S lote 22</li>
                 </ul>
             </section>

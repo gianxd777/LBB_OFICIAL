@@ -24,24 +24,34 @@
             <!-- Menú escritorio -->
             <ul class="nav-menu">
                 <li><a href="index.html">Inicio</a></li>
-                <li><a href="construccion.html">Sobre nosotros</a></li>
+                <li><a href="https://gianxd777.github.io/Licoreria_La_Botella_Borracha1/blog.html">Sobre nosotros</a></li>
 
                 <!-- Productos con submenú -->
                 <li class="has-submenu">
-                    <a href="/productos">Productos</a>
+                    <a href="">Productos</a>
                     <ul class="submenu">
                         <li><a href="Whisky.html">Whisky</a></li>
                         <li><a href="ron.html">Ron</a></li>
                         <li><a href="vodka.html">Vodka</a></li>
                         <li><a href="vinos.html">Vinos</a></li>
                         <li><a href="cervezas.html">Cervezas</a></li>
-                        <li><a href="snacks.html">Snacks</a></li>
                         <li><a href="gasificadas.html">Gasificadas con alcohol</a></li>
 
                     </ul>
                 </li>
 
-                <li><a href="ofertas.html">Ofertas</a></li>
+                <li class="has-submenu">
+                    <a href="">SIN ALCOHOL</a>
+                    <ul class="submenu">
+                        <li><a href="mineral.html">Agua Mineral</a></li>
+                        <li><a href="energizantes.html">Energisantes</a></li>
+                        <li><a href="gaseosas.html">Gaseosas</a></li>
+                        <li><a href="vapes.html">Vapes</a></li>
+                        <li><a href="snacks.html">Snacks</a></li>
+                        <li><a href="frugos.html">Frugos</a></li>
+
+                    </ul>
+                </li>
                 <li><a href="combos.html">Combos</a></li>
             </ul>
 
@@ -84,27 +94,35 @@
 
         <!-- Menú móvil -->
         <div class="mobile-menu">
-            <!-- Menú principal -->
-            <div class="menu-principal">
-                <a href="index.html">Inicio</a>
-                <a href="sobre_nosotros.html">Sobre nosotros</a>
-                <a href="#" class="productos-btn">Productos</a>
-                <a href="ofertas.html">Ofertas</a>
-                <a href="combos.html">Combos</a>
-            </div>
+    <div class="menu-principal">
+        <a href="index.html">Inicio</a>
+        <a href="sobre_nosotros.html">Sobre nosotros</a>
+        <a href="#" class="productos-btn" id="btn-alcohol">Productos</a>
+        <a href="#" class="productos-btn" id="btn-sin-alcohol">SIN ALCOHOL</a>
+        <a href="ofertas.html">Ofertas</a>
+        <a href="combos.html">Combos</a>
+    </div>
 
-            <!-- Menú de categorías (oculto al inicio) -->
-            <div class="menu-categorias">
-                <a href="#" class="volver-btn"><i class="fa fa-arrow-left"></i> Volver</a>
-                <a href="Whisky.html">Whisky</a>
-                <a href="ron.html">Ron</a>
-                <a href="vodka.html">Vodka</a>
-                <a href="vinos.html">Vinos</a>
-                <a href="cervezas.html">Cervezas</a>
-                <a href="snacks.html">Snacks</a>
-                <a href="gasificadas.html">Gasificadas con alcohol</a>
-            </div>
-        </div>
+    <div class="menu-categorias" id="menu-alcohol">
+        <a href="#" class="volver-btn"><i class="fa fa-arrow-left"></i> Volver</a>
+        <a href="Whisky.html">Whisky</a>
+        <a href="ron.html">Ron</a>
+        <a href="vodka.html">Vodka</a>
+        <a href="vinos.html">Vinos</a>
+        <a href="cervezas.html">Cervezas</a>
+        <a href="gasificadas.html">Gasificadas con alcohol</a>
+    </div>
+
+    <div class="menu-categorias" id="menu-sin-alcohol">
+        <a href="#" class="volver-btn"><i class="fa fa-arrow-left"></i> Volver</a>
+        <a href="mineral.html">Agua Mineral</a>
+        <a href="energizantes.html">Energizantes</a>
+        <a href="gaseosas.html">Gaseosas</a>
+        <a href="vapes.html">Vapes</a>
+        <a href="snacks.html">Snacks</a>
+        <a href="frugos.html">Frugos</a>
+    </div>
+</div>
 
     </header>
 
@@ -112,7 +130,7 @@
         <!-- Banner 1 -->
         <section aria-label="Banner principal">
             <a href="#">
-                <img src="img/UYYYY.png" alt="Gran oferta en licores este fin de semana" width="1200" height="320">
+                <img src="baners/7.png" alt="Gran oferta en licores este fin de semana" width="1200" height="320">
             </a>
         </section>
 
@@ -122,13 +140,13 @@
 
         <section aria-labelledby="titulo-productos">
 
-            <article data-producto-id="a8">
+            <article data-producto-id="a1">
                 <img src="img/PILSEN SIX ORIGINAL.webp" alt="Ron Añejo">
                 <figcaption>
                     <h3>Cerveza PILSEN Pack 6 Lata 473ml</h3>
                     <div class="precio-container">
                         <del>S/ 36.00</del>
-                        <strong>S/ 33.00</strong>
+                        <strong>S/ 35.00</strong>
                     </div>
                     <button aria-label="Agregar al carrito">Agregar al Carrito</button>
                 </figcaption>
@@ -204,7 +222,7 @@
             <section>
                 <h3>Locales</h3>
                 <ul>
-                    <li>📍 Huancayo - Jupiter y Cometa (ALfrente del parque de las aguas)</li>
+                    
                     <li>📍 Huancayo - cooperativa Santa Isabel - Av. orion Mz S lote 22</li>
                 </ul>
             </section>

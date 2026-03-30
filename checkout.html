@@ -33,7 +33,7 @@
     <div id="tienda" class="panel-info" style="display:none;">
   <h3><span class="dot"></span> Elige el punto de recojo</h3>
   <div class="locales-grid">
-    
+    <!--
     <input type="radio" name="local" value="Local 1" id="loc1" hidden>
     <label for="loc1" class="local-card">
       <div class="card-icon">📍</div>
@@ -43,7 +43,7 @@
         <span class="badge">Disponible</span>
       </div>
       <div class="select-indicator"></div>
-    </label>
+    </label>-->
 
     <input type="radio" name="local" value="Local 2" id="loc2" hidden>
     <label for="loc2" class="local-card">
@@ -81,15 +81,27 @@
       </div>
 
       <div class="payment-instructions">
-        <p>Realiza tu pago vía <strong>Yape</strong></p>
-        <div class="yape-number">926 727 267</div>
-      </div>
+  <p>
+    PASO 1 <br>
+    Realiza tu pago vía Yape y enviar al <br>
+    <strong>WHATSAPP</strong>
+  </p>
+
+  <div class="yape-container">
+    <div class="yape-number" id="numeroYape">906 731 710</div>
+    <button class="btn-copiar" onclick="copiarNumero()">
+      Copiar número
+    </button>
+  </div>
+
+  <span id="copiadoMsg">Copiado ✔</span>
+</div>
 
       <div class="button-group">
-        <button id="generarPDF" class="btn btn-dark">📄 Descargar Resumen</button>
+        <button id="generarPDF" class="btn btn-dark">PASO 2 <br>Descargar Boleta y enviar al WHATSAPP</button>
         <button id="btnWhatsapp" class="btn btn-whatsapp">
-          <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" width="20">
-          ENVIAR A WHATSAPP
+          <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" width="20"> PASO 3 <br>
+           WHATSAPP
         </button>
         <button class="btn-back" onclick="location.href='index.html'">Regresar a la tienda</button>
       </div>
